@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AXXA application, clair, V1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./proto.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#1d1d1f;text-decoration:none}a:hover{color:#0071a8}
+.nav-links{display:flex}
+@media (max-width:820px){.nav-links{display:none}}
+.phone{display:block;height:auto;aspect-ratio:414/868}
+.trio{display:flex;justify-content:center;align-items:flex-end;gap:32px}
+.split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.split>.txt{grid-column:1/span 6}.split>.vis{grid-column:8/span 5;display:flex;justify-content:center}
+.tour{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center}
+.tour>.list{grid-column:7/span 6;grid-row:1}.tour>.vis{grid-column:1/span 5;grid-row:1;display:flex;justify-content:center}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.faq-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.faq-grid>:first-child{grid-column:1/span 4}.faq-grid>.faq{grid-column:6/span 7}
+.foot-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 24px}
+.foot-grid>:first-child{grid-column:span 6}.foot-grid>*{grid-column:span 2}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex-shrink:0;font-size:26px;font-weight:300;line-height:1;color:#0071a8}
+.faq details[open] summary::after{content:"\2212"}
+@media (max-width:900px){.split,.tour,.faq-grid{grid-template-columns:1fr;row-gap:48px}.split>*,.tour>*,.faq-grid>*{grid-column:auto!important;grid-row:auto!important}.band{min-height:0!important}.band-img{position:static!important;height:300px!important;order:3}.strip{grid-template-columns:1fr!important}.strip li{border-left:0!important;border-top:1px solid rgba(0,0,0,0.1)}.strip li:first-child{border-top:0}.steps,.plans{grid-template-columns:1fr}.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.foot-grid>*{grid-column:span 1!important}.foot-grid a{min-height:44px;display:flex;align-items:center}.trio .side{width:200px!important}}
+@media (max-width:640px){.secs{grid-template-columns:1fr!important;gap:28px!important;padding:28px 16px!important;border-radius:24px;background:rgba(255,255,255,0.85);border:1px solid rgba(0,0,0,0.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}.secs .big{font-size:72px!important}.trio .side{display:none!important}.trio .mid{width:260px!important}.sec{padding-top:96px!important;padding-bottom:96px!important}}
+</style>
+</helmet>
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #1d1d1f; background: #ffffff; min-height: 100vh; display: flex; flex-direction: column">
+
+  <div style="background: #f5f5f7; font-size: 13px; color: #6e6e73; text-align: center; padding: 8px 16px">Conçu, fabriqué et assemblé au Québec · <a href="tel:18339956400" style="color: #0071a8">1-833-995-6400</a></div>
+
+  <header style="position: sticky; top: 0; z-index: 6; background: rgba(255,255,255,0.78); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #d2d2d7">
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a href="accueil-clair.html" aria-label="AXXA, accueil" style="flex: 1 1 0; display: flex; align-items: center; min-height: 44px"><img src="./assets/bc9f9890fcb942744874b78cc4788fe4.png" alt="AXXA" style="height: 16px; width: auto; display: block"></a>
+      <nav class="nav-links" aria-label="Principale" style="gap: 4px; padding: 4px; border-radius: 999px; background: rgba(255,255,255,0.55); border: 1px solid rgba(0,0,0,0.08); font-size: 14px">
+        <a href="accueil-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Accueil</a>
+        <a href="catalogue-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Boutique</a>
+        <a href="fonctionnement-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Fonctionnement</a>
+        <a href="#" aria-current="page" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; background: #ffffff; color: #1d1d1f; box-shadow: 0 0 0 1px #d2d2d7">Application</a>
+        <a href="entreprises-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Entreprises</a>
+      </nav>
+      <div style="flex: 1 1 0; display: flex; align-items: center; justify-content: flex-end; gap: 8px">
+        <a href="application-sombre.html" class="proto-theme proto-theme--bar" data-theme-to="sombre" aria-label="Passer au thème sombre" title="Passer au thème sombre" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5Z"></path></svg></a>
+        <a href="a-venir-clair.html?p=panier" aria-label="Panier" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+        </a>
+        <a href="catalogue-clair.html#kits" style="background: #1d1d1f; color: #ffffff; font-size: 14px; font-weight: 500; padding: 0 16px; min-height: 44px; display: flex; align-items: center; border-radius: 999px; white-space: nowrap">Magasiner</a>
+        <button type="button" aria-label="Menu" style="width: 48px; height: 48px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #1d1d1f">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section style="position: relative; overflow: hidden; background: #f5f5f7">
+    <img src="./assets/ec9ccc9d178c29c77b05c9fa6033f1bc.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block">
+    <div style="position: relative; max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 32px 24px 0">
+      <nav aria-label="Fil d'Ariane" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; color: #424245"><a href="accueil-clair.html" style="color: #424245">Accueil</a><span aria-hidden="true">›</span><span style="color: #1d1d1f">Application</span></nav>
+      <div style="max-width: 860px; margin: 56px auto 0; text-align: center">
+        <h1 style="margin: 0; font-size: clamp(48px, 6vw, 80px); line-height: 1.02; font-weight: 600; letter-spacing: -0.04em">L'eau de la maison, dans votre poche.</h1>
+        <p style="margin: 24px auto 0; max-width: 640px; font-size: 19px; line-height: 1.55; color: #424245">Voyez chaque sonde, fermez l'eau à distance et recevez l'alerte <span style="color: #1d1d1f; font-weight: 500">à la seconde où une fuite commence</span>, où que vous soyez.</p>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+          <div style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 20px; border-radius: 999px; border: 1px solid #424245"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="M10.5 18.5h3"></path></svg><span style="font-size: 15px; font-weight: 500">Bientôt sur iPhone*</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 20px; border-radius: 999px; border: 1px solid #424245"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="M10.5 18.5h3"></path></svg><span style="font-size: 15px; font-weight: 500">Bientôt sur Android*</span></div>
+        </div>
+      </div>
+      <div class="trio" style="margin-top: 64px">
+        <img class="phone side" src="./assets/375ceca34c4c6b8d8a1d54879851c94f.webp" alt="Écran Fuite détectée de l'app AXXA : laveuse, eau coupée automatiquement" style="width: 270px; margin-bottom: -40px">
+        <img class="phone mid" src="./assets/4a45c30da7929aa09e4e3eba5bbf5d49.webp" alt="Écran d'accueil de l'app AXXA : votre maison est protégée, valve principale ouverte" style="width: 320px; margin-bottom: -120px">
+        <img class="phone side" src="./assets/5654018cffbff11a262f5e5ac3319d87.webp" alt="Écran Sondes de l'app AXXA : 10 sondes au sec, une pile à changer" style="width: 270px; margin-bottom: -40px">
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; overflow: hidden; background: #f5f5f7">
+    <img src="./assets/3156871afaecc98f7705a567d49ace73.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 40%; display: block">
+    <div class="sec" style="position: relative; max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 140px 24px 120px; text-align: center">
+      <h2 style="margin: 0 auto; max-width: 820px; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Ce que vous voyez à 300&nbsp;km du chalet.</h2>
+      <p style="margin: 20px auto 0; max-width: 560px; font-size: 19px; line-height: 1.55; color: #424245">La notification dit tout sans ouvrir l'app : la fuite, l'endroit, et que l'eau est déjà coupée.</p>
+      <img class="phone" src="./assets/9511d32c3769fe1f0c9601325c3da6ef.webp" alt="Écran verrouillé avec la notification AXXA : fuite détectée à la laveuse, eau coupée automatiquement" style="width: 300px; margin: 56px auto 0">
+      <ol class="secs" style="list-style: none; margin: 64px auto 0; padding: 0; max-width: 960px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+        <li><div style="font-size: 15px; font-weight: 500; color: #424245; font-variant-numeric: tabular-nums">14:32:</div><div class="big" style="font-size: 112px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: #b4480a">06</div><div style="margin-top: 12px; font-size: 17px; font-weight: 500">Fuite détectée à la laveuse</div></li>
+        <li><div style="font-size: 15px; font-weight: 500; color: #424245; font-variant-numeric: tabular-nums">14:32:</div><div class="big" style="font-size: 112px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: #1a7f4b">07</div><div style="margin-top: 12px; font-size: 17px; font-weight: 500">Eau coupée automatiquement*</div></li>
+        <li><div style="font-size: 15px; font-weight: 500; color: #424245; font-variant-numeric: tabular-nums">14:32:</div><div class="big" style="font-size: 112px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: #0071a8">08</div><div style="margin-top: 12px; font-size: 17px; font-weight: 500">Alerte envoyée</div></li>
+      </ol>
+      <ul style="list-style: none; margin: 48px auto 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+        <li style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,0.72); border: 1px solid rgba(0,0,0,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 15px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>Notification</li>
+        <li style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,0.72); border: 1px solid rgba(0,0,0,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 15px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Texto</li>
+        <li style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,0.72); border: 1px solid rgba(0,0,0,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 15px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3 6 9 7 9-7"></path></svg>Courriel</li>
+        <li style="display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,0.72); border: 1px solid rgba(0,0,0,0.1); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 15px; font-weight: 500"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M19 5a10 10 0 0 1 0 14"></path></svg>Alarme sur place</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="ecrans">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 160px 24px">
+      <div class="tour">
+        <div class="list" style="min-width: 0">
+          <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Un écran à la fois.</h2>
+          <p style="margin: 16px 0 0; max-width: 480px; font-size: 18px; line-height: 1.55; color: #6e6e73">Tout le système, sans jargon. Touchez un écran pour le voir.</p>
+          <div role="group" aria-label="Écrans de l'application" style="margin-top: 40px; display: flex; flex-direction: column; gap: 8px">
+            <sc-for list="{{tabs}}" as="t" hint-placeholder-count="5">
+              <button type="button" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="font-family: inherit; text-align: left; cursor: pointer; width: 100%; border-radius: 24px; padding: 20px 24px; color: #1d1d1f; background: {{t.bg}}; border: {{t.border}}">
+                <span style="display: block; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{t.title}}</span>
+                <sc-if value="{{t.open}}" hint-placeholder-val="{{false}}"><span style="display: block; margin-top: 8px; font-size: 15px; line-height: 1.55; color: #6e6e73">{{t.desc}}</span></sc-if>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        <div class="vis" style="min-width: 0"><img class="phone" src="{{cur.src}}" alt="{{cur.alt}}" style="width: 340px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="position: relative; overflow: hidden; background: #f5f5f7; min-height: 720px; display: flex; flex-direction: column">
+    <img class="band-img" src="./assets/ed3057d8f3b254c0bfecfc59869fbe36.webp" alt="Une main tient un téléphone près du contrôleur AXXA pour le jumeler par Bluetooth" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block">
+    <div style="position: relative; width: 100%; max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 96px 24px 0">
+      <div style="display: inline-block; max-width: 520px; box-sizing: border-box; padding: 32px; border-radius: 24px; background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px)">
+        <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Prête en quelques minutes.</h2>
+        <p style="margin: 16px 0 0; max-width: 440px; font-size: 18px; line-height: 1.55; color: #424245">Le kit arrive préprogrammé. L'app se jumelle au contrôleur, sans fil.</p>
+      </div>
+    </div>
+    <div style="position: relative; width: 100%; max-width: 1272px; box-sizing: border-box; margin: auto auto 0; padding: 48px 24px 40px">
+      <ol class="strip" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 24px; background: rgba(255,255,255,0.8); border: 1px solid rgba(0,0,0,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); overflow: hidden">
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">01</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Scannez le contrôleur</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #424245">Le code du contrôleur lie votre système à votre compte. Vous pouvez aussi l'entrer à la main.</p></li>
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px; border-left: 1px solid rgba(0,0,0,0.1)"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">02</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Branchez le Wi-Fi par Bluetooth</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #424245">Votre téléphone transmet le réseau et les réglages au contrôleur, de proche en proche.</p></li>
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px; border-left: 1px solid rgba(0,0,0,0.1)"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">03</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Invitez la famille</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #424245">Chaque personne invitée reçoit les alertes et voit qui s'occupe de la fuite.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="background: #f5f5f7">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 160px 24px">
+      <div style="text-align: center">
+        <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">La protection est incluse.</h2>
+        <p style="margin: 16px auto 0; max-width: 600px; font-size: 18px; line-height: 1.55; color: #6e6e73">Avec ou sans abonnement, le système détecte, ferme l'eau et vous alerte.</p>
+        <div role="group" aria-label="Facturation d'AXXA Plus" style="margin-top: 32px; display: inline-flex; padding: 4px; border-radius: 999px; border: 1px solid #d2d2d7">
+          <button type="button" onClick="{{pickMois}}" aria-pressed="{{isMois}}" style="font-family: inherit; font-size: 15px; font-weight: 500; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; cursor: pointer; background: {{moisBg}}; color: {{moisFg}}">Mensuel</button>
+          <button type="button" onClick="{{pickAn}}" aria-pressed="{{isAn}}" style="font-family: inherit; font-size: 15px; font-weight: 500; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; cursor: pointer; background: {{anBg}}; color: {{anFg}}">Annuel, 20&nbsp;% de rabais</button>
+        </div>
+      </div>
+      <div class="plans" style="margin-top: 64px; max-width: 1000px; margin-left: auto; margin-right: auto">
+        <article style="background: #ffffff; border-radius: 32px; padding: 40px; display: flex; flex-direction: column; gap: 16px">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Inclus avec chaque kit</h3>
+          <div style="font-size: 40px; font-weight: 600; letter-spacing: -0.03em">0 $</div>
+          <p style="margin: 0; font-size: 15px; color: #6e6e73">Pour toujours.</p>
+          <ul style="list-style: none; margin: 8px 0 0; padding: 16px 0 0; border-top: 1px solid #d2d2d7; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Fermeture automatique de l'eau</li>
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Alertes par notification, texto et courriel</li>
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Fermer et rouvrir l'eau à distance</li>
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>État de chaque sonde, pile et signal</li>
+          </ul>
+        </article>
+        <article style="background: #ffffff; border: 1px solid #00a1e8; border-radius: 32px; padding: 39px; display: flex; flex-direction: column; gap: 16px">
+          <h3 style="margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">AXXA Plus</h3>
+          <div style="font-size: 15px; font-weight: 600; color: #0071a8">Première année offerte</div>
+          <div style="display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px"><span style="font-size: 40px; font-weight: 600; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">{{plusPrice}}</span><span style="font-size: 17px; color: #6e6e73">{{plusUnit}}</span></div>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #6e6e73">{{plusNote}}</p>
+          <ul style="list-style: none; margin: 8px 0 0; padding: 16px 0 0; border-top: 1px solid #d2d2d7; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Historique complet et rapport PDF pour l'assureur</li>
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Plusieurs personnes et plusieurs maisons</li>
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Assistant AXXA qui connaît vos appareils</li>
+            <li style="display: flex; gap: 12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l4 4 10-10"></path></svg>Tout ce qui est inclus avec le kit</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions" class="sec" style="max-width: 1272px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 120px 24px 160px">
+    <div class="faq-grid">
+      <div>
+        <h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 56px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Questions sur l'application</h2>
+        <p style="margin: 16px 0 0; max-width: 344px; font-size: 17px; line-height: 1.55; color: #6e6e73">Vous ne trouvez pas votre réponse&nbsp;? Un conseiller vous répond.</p>
+        <a href="tel:18339956400" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 16px; font-size: 16px; font-weight: 500; color: #0071a8">1-833-995-6400 ›</a>
+      </div>
+      <div class="faq">
+        <details open="" style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Faut-il l'application pour que le système fonctionne&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Non. Le contrôleur ferme l'eau et fait sonner l'alarme sur place*. L'application ajoute le suivi, les alertes à distance et le contrôle de la valve.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">L'application est-elle gratuite&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Oui. La fermeture automatique, les alertes et le contrôle à distance sont inclus avec chaque kit. AXXA Plus est offert la première année, puis 9,99 $ par mois ou 95,90 $ par an, soit 20 % de rabais*.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Sur quels téléphones&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">iPhone et Android. L'application arrive bientôt dans les deux magasins d'applications*.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Plusieurs personnes peuvent-elles recevoir les alertes&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Oui. Invitez votre famille ou un voisin : chacun reçoit les alertes et voit qui s'occupe de la fuite.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; border-bottom: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Puis-je suivre la maison et le chalet&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Oui. Chaque système ajouté apparaît dans « Mes maisons », dans la même application*.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #f5f5f7">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 120px 24px; text-align: center">
+      <h2 style="margin: 0 auto; max-width: 760px; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Le système d'abord. L'application suit.</h2>
+      <p style="margin: 16px auto 0; max-width: 520px; font-size: 18px; line-height: 1.55; color: #6e6e73">Choisissez votre kit : il arrive préprogrammé, prêt à jumeler.</p>
+      <div style="margin-top: 32px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 24px">
+        <a href="catalogue-clair.html#kits" style="background: #00a1e8; color: #000000; font-size: 16px; font-weight: 600; padding: 0 28px; min-height: 52px; display: flex; align-items: center; border-radius: 999px">Voir les kits</a>
+        <a href="fonctionnement-clair.html" style="font-size: 17px; font-weight: 500; color: #0071a8; min-height: 44px; display: flex; align-items: center">Comment ça marche ›</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: auto; background: #f5f5f7; border-top: 1px solid #d2d2d7; font-size: 14px; color: #6e6e73">
+    <div class="foot-grid" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 48px 24px 32px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <img src="./assets/bc9f9890fcb942744874b78cc4788fe4.png" alt="AXXA" style="height: 16px; width: auto; align-self: flex-start">
+        <div style="line-height: 1.6">AXXA Design inc.<br>680, boul. des Laurentides<br>Piedmont (Québec) J0R 1K0</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Boutique</div><a href="catalogue-clair.html#kits" style="color: #6e6e73">Kits</a><a href="catalogue-clair.html#composantes" style="color: #6e6e73">Composantes</a><a href="catalogue-clair.html#composantes" style="color: #6e6e73">Accessoires</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Soutien</div><a href="a-venir-clair.html?p=faq" style="color: #6e6e73">FAQ</a><a href="fonctionnement-clair.html#placer" style="color: #6e6e73">Installation</a><a href="produit-clair.html#documents" style="color: #6e6e73">Documents</a><a href="accueil-clair.html#assurance" style="color: #6e6e73">Assurance</a><a href="#" style="color: #6e6e73">Application</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Nous joindre</div><a href="tel:18339956400" style="color: #6e6e73">1-833-995-6400</a><a href="mailto:info@axxa.ca" style="color: #6e6e73">info@axxa.ca</a></div>
+    </div>
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 16px 24px 32px; border-top: 1px solid #d2d2d7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px"><span>© 2026 AXXA Design inc. Tous droits réservés.</span><span>* Chiffres provisoires, à confirmer avant le lancement. Prix d'AXXA Plus à titre indicatif. Écrans de l'application en conception.</span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7050}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 0, bill: 'mois' };
+  }
+  renderVals() {
+    const T = [
+      { title: 'Accueil', desc: "Un coup d'œil suffit : l'état de la maison, la valve principale et l'appareil. Glissez la poignée pour fermer l'eau, après confirmation.", src: './assets/4a45c30da7929aa09e4e3eba5bbf5d49.webp', alt: "Écran d'accueil de l'app AXXA : votre maison est protégée, valve principale ouverte" },
+      { title: 'Fuite détectée', desc: "Où, quand, ce qu'AXXA a déjà fait et qui est averti. Une action principale : « Je m'en occupe ».", src: './assets/375ceca34c4c6b8d8a1d54879851c94f.webp', alt: "Écran Fuite détectée : laveuse, eau coupée automatiquement, texto et courriel envoyés" },
+      { title: 'Sondes', desc: "Par étage, chaque sonde avec sa pièce, son état, sa pile et son signal. Celle à surveiller ressort.", src: './assets/5654018cffbff11a262f5e5ac3319d87.webp', alt: "Écran Sondes : 10 sondes au sec, une pile à changer à la laveuse" },
+      { title: 'Historique', desc: "Chaque événement à la seconde près, et qui a agi. Exportez un PDF comme preuve pour votre assureur.", src: './assets/9425ff3c5518fc8629ac48fe2b692ac9.webp', alt: "Écran Historique : fuite détectée, eau coupée, alerte envoyée, eau rouverte" },
+      { title: 'Assistant AXXA', desc: "Il connaît vos appareils : il nomme la sonde, la pièce et la pile, puis donne les étapes, en français ou en anglais*.", src: './assets/542986a4417119c225d437208944aa01.webp', alt: "Écran Assistant AXXA : étapes pour changer la pile de la sonde Laveuse" }
+    ];
+    const s = this.state;
+    return {
+      tabs: T.map((t, i) => {
+        const on = i === s.tab;
+        return { title: t.title, desc: t.desc, open: on, on: on ? 'true' : 'false', bg: on ? '#f5f5f7' : 'transparent', border: on ? '1px solid #d2d2d7' : '1px solid transparent', pick: () => this.setState({ tab: i }) };
+      }),
+      cur: T[s.tab],
+      isMois: s.bill === 'mois' ? 'true' : 'false',
+      isAn: s.bill === 'an' ? 'true' : 'false',
+      moisBg: s.bill === 'mois' ? '#1d1d1f' : 'transparent',
+      moisFg: s.bill === 'mois' ? '#ffffff' : '#1d1d1f',
+      anBg: s.bill === 'an' ? '#1d1d1f' : 'transparent',
+      anFg: s.bill === 'an' ? '#ffffff' : '#1d1d1f',
+      pickMois: () => this.setState({ bill: 'mois' }),
+      pickAn: () => this.setState({ bill: 'an' }),
+      plusPrice: s.bill === 'mois' ? '9,99 $' : '95,90 $',
+      plusUnit: s.bill === 'mois' ? 'par mois*' : 'par an*',
+      plusNote: s.bill === 'mois' ? 'Après la première année. Sans engagement, annulable en tout temps.' : 'Soit 7,99 $ par mois, facturé une fois par an. Vous économisez 23,98 $.'
+    };
+  }
+}
+</script>
+<script src="./proto.js" data-page="application" data-theme="clair"></script>
+</body>
+</html>

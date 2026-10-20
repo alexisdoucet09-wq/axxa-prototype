@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AXXA accueil, clair, V4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./proto.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#1d1d1f;text-decoration:none}a:hover{color:#0071a8}
+.nav-links{display:flex}
+@media (max-width:820px){.nav-links{display:none}.hide-sm{display:none}}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.net-ping{animation:netping 2.4s ease-out infinite}
+.net-link.l2 .net-ping{animation-delay:1.2s}
+@keyframes netping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(1.35,1.9);opacity:0}}
+@media (prefers-reduced-motion:reduce){.net-ping{display:none}}
+@media (max-width:900px){.steps{grid-template-columns:1fr;gap:20px}.net-link{display:none}}
+.scn-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:24px;align-items:start}.scn-grid>*{grid-column:span 5}
+@media (max-width:900px){.scn-panel{padding:24px!important}.scn-grid{grid-template-columns:1fr}.scn-grid>*{grid-column:auto}.ins-card{padding:40px 24px!important}.ins-card>div{grid-column:1/-1!important}}
+.faq-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.faq-grid>:first-child{grid-column:1/span 4}.faq-grid>.faq{grid-column:6/span 7}
+.foot-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 24px}
+.foot-grid>:first-child{grid-column:span 6}.foot-grid>*{grid-column:span 2}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr;row-gap:32px}.faq-grid>*{grid-column:auto!important}.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.foot-grid>*{grid-column:span 1!important}}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex-shrink:0;font-size:26px;font-weight:300;line-height:1;color:#0071a8}
+.faq details[open] summary::after{content:"\2212"}
+</style>
+</helmet>
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #1d1d1f; background: #ffffff; min-height: 100vh; display: flex; flex-direction: column">
+
+  <div style="background: #f5f5f7; font-size: 13px; color: #424245; text-align: center; padding: 8px 16px">Conçu, fabriqué et assemblé au Québec · <a href="tel:18339956400" style="color: #0071a8">1-833-995-6400</a></div>
+
+
+  <section id="haut" style="position: relative; overflow: hidden; background: #ececee">
+    <img src="./assets/009421f5e737029293c6ebd17f194117.jpg" alt="Valve AXXA sur un tuyau qui fuit, sonde AXXA posée dans l\'eau" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center">
+    <header style="position: absolute; top: 0; left: 0; right: 0; z-index: 5">
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a href="#" aria-label="AXXA, accueil" style="flex: 1 1 0; display: flex; align-items: center"><img src="./assets/7b7c358320e6e22d2102026be90ac227.png" alt="AXXA" style="height: 16px; width: auto; display: block"></a>
+      <nav class="nav-links" aria-label="Principale" style="gap: 4px; padding: 4px; border-radius: 999px; background: rgba(255,255,255,0.55); backdrop-filter: blur(16px); border: 1px solid rgba(0,0,0,0.08); font-size: 14px">
+        <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5">
+          <a href="{{ n.href }}" onClick="{{ n.pick }}" aria-current="{{ n.current }}" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; {{ n.style }}">{{ n.label }}</a>
+        </sc-for>
+      </nav>
+      <div style="flex: 1 1 0; display: flex; align-items: center; justify-content: flex-end; gap: 8px">
+        <a href="accueil-sombre.html" class="proto-theme proto-theme--bar" data-theme-to="sombre" aria-label="Passer au thème sombre" title="Passer au thème sombre" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5Z"></path></svg></a>
+        <a href="a-venir-clair.html?p=panier" aria-label="Panier" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+        </a>
+        <a href="catalogue-clair.html#kits" style="background: #1d1d1f; color: #ffffff; font-size: 14px; font-weight: 500; padding: 8px 16px; border-radius: 999px; white-space: nowrap">Magasiner</a>
+        <button type="button" aria-label="Menu" style="width: 48px; height: 48px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #1d1d1f">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"></path></svg>
+        </button>
+      </div>
+    </div>
+    </header>
+    <div style="position: relative; max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 232px 24px 192px; display: flex; justify-content: flex-end">
+      <div style="width: 496px; max-width: 100%; display: flex; flex-direction: column; gap: 24px">
+        <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #0071a8">Prévention des dégâts d'eau</div>
+        <h1 style="margin: 0; font-size: clamp(44px, 6vw, 76px); line-height: 1.02; font-weight: 600; letter-spacing: -0.035em; color: #1d1d1f"></h1><h1 spellcheck="false" style="color: #1d1d1f; margin: 0px; font-size: clamp(44px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 600; font-style: normal">Détecter.<br>Protéger.<br>Prévenir.</h1>
+        <p style="margin: 0; font-size: 19px; line-height: 1.5; color: #424245">AXXA coupe l'eau à la première goutte, avant que le dégât commence.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 16px">
+          <a href="#kits" style="background: #1d1d1f; color: #ffffff; font-size: 16px; font-weight: 500; padding: 16px 24px; border-radius: 999px">Voir les kits</a>
+          <a href="fonctionnement-clair.html" style="background: transparent; color: #1d1d1f; font-size: 16px; font-weight: 500; padding: 16px 24px; border-radius: 999px; border: 1px solid #d2d2d7">Comment ça marche</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <section id="scenario" style="max-width: 1272px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 160px 24px 80px">
+    <div style="max-width: 824px; margin: 0 auto; text-align: center">
+      <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Fuite détectée. Eau coupée. Alerte envoyée.</h2>
+      <p style="margin: 24px auto 0; max-width: 680px; font-size: 19px; line-height: 1.55; color: #6e6e73">Chaque sonde a sa place et son nom. Quand l'une d'elles détecte de l'eau, AXXA ferme la valve en une seconde* et vous dit <span style="color: #1d1d1f; font-weight: 500">exactement où aller.</span></p>
+    </div>
+
+
+    <ol class="steps" style="list-style: none; margin: 64px 0 0; padding: 0">
+      <li style="position: relative; background: #f5f5f7; border-radius: 12px; display: flex; flex-direction: column; font-size: 16px">
+        <div style="position: relative; width: 100%; aspect-ratio: 16 / 10">
+          <div style="position: absolute; inset: 0; overflow: hidden; border-radius: 24px 24px 0 0"><div style="position: absolute; top: 16px; left: 16px; z-index: 1; padding: 4px 12px; border-radius: 999px; background: rgba(0,0,0,0.56); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); font-size: 15px; font-weight: 600; color: #f5f5f7; font-variant-numeric: tabular-nums"><span style="color: #ff8a3d">14:32:06</span></div><img src="./assets/0c4157578b960ce3eb57fc47dfea14c2.jpg" alt="Sonde sans fil AXXA dans une flaque d'eau" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+          <div class="net-link l1" aria-hidden="true" style="position: absolute; left: 100%; top: 50%; width: 24px; height: 0; z-index: 2"><span style="position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 8px; padding: 8px 16px 8px 8px; border-radius: 999px; background: #ffffff; border: 1.5px solid #0071a8; box-shadow: 0 6px 18px rgba(0,0,0,0.18); white-space: nowrap"><span class="net-ping" style="position: absolute; inset: -1.5px; border-radius: 999px; border: 1.5px solid #0071a8"></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round"><path d="M4.5 10.5a11 11 0 0 1 15 0"></path><path d="M7.5 14a6.5 6.5 0 0 1 9 0"></path><circle cx="12" cy="18" r="1.2" fill="#0071a8" stroke="none"></circle></svg><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #0071a8">Sans fil</span></span></div>
+        </div>
+        <div style="padding: 24px 24px 24px"><div style="margin-top: 8px; font-size: 21px; font-weight: 600">Fuite détectée</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">La sonde de la laveuse sent l'eau et prévient le contrôleur, sans fil.</div></div>
+      </li>
+      <li style="position: relative; background: #f5f5f7; border-radius: 12px; display: flex; flex-direction: column; font-size: 16px">
+        <div style="position: relative; width: 100%; aspect-ratio: 16 / 10">
+          <div style="position: absolute; inset: 0; overflow: hidden; border-radius: 24px 24px 0 0"><div style="position: absolute; top: 16px; left: 16px; z-index: 1; padding: 4px 12px; border-radius: 999px; background: rgba(0,0,0,0.56); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); font-size: 15px; font-weight: 600; color: #f5f5f7; font-variant-numeric: tabular-nums">14:32:<span style="color: #30d158">07</span></div><img src="./assets/4829154f9e166d682d15959d680aee72.jpg" alt="Valve motorisée AXXA installée sur l'entrée d'eau principale" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+          <div class="net-link l2" aria-hidden="true" style="position: absolute; left: 100%; top: 50%; width: 24px; height: 0; z-index: 2"><span style="position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 8px; padding: 8px 16px 8px 8px; border-radius: 999px; background: #ffffff; border: 1.5px solid #0071a8; box-shadow: 0 6px 18px rgba(0,0,0,0.18); white-space: nowrap"><span class="net-ping" style="position: absolute; inset: -1.5px; border-radius: 999px; border: 1.5px solid #0071a8"></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0071a8" stroke-width="2" stroke-linecap="round"><path d="M4.5 10.5a11 11 0 0 1 15 0"></path><path d="M7.5 14a6.5 6.5 0 0 1 9 0"></path><circle cx="12" cy="18" r="1.2" fill="#0071a8" stroke="none"></circle></svg><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #0071a8">Wi-Fi</span></span></div>
+        </div>
+        <div style="padding: 24px 24px 24px"><div style="margin-top: 8px; font-size: 21px; font-weight: 600">Eau coupée</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">La valve principale se ferme d'elle-même. Aucune intervention de votre part.</div></div>
+      </li>
+      <li style="position: relative; background: #f5f5f7; border-radius: 12px; display: flex; flex-direction: column">
+        <div style="position: relative; width: 100%; aspect-ratio: 16 / 10">
+          <div style="position: absolute; inset: 0; overflow: hidden; border-radius: 24px 24px 0 0"><div style="position: absolute; top: 16px; left: 16px; z-index: 1; padding: 4px 12px; border-radius: 999px; background: rgba(0,0,0,0.56); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); font-size: 15px; font-weight: 600; color: #f5f5f7; font-variant-numeric: tabular-nums">14:32:<span style="color: #30d158">08</span></div><img src="./assets/eacac9d3489b97ef91ccf9cc1ef9ce4c.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block">
+            <div role="img" aria-label="Notification AXXA : fuite détectée à la laveuse, eau coupée, texto et courriel envoyés" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 84%; display: flex; flex-direction: column; gap: 8px">
+              <div style="background: rgba(30,30,32,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 16px 16px; display: flex; gap: 8px; color: #f5f5f7; box-shadow: 0 12px 32px rgba(0,0,0,0.28)">
+                <div style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; background: #000000; display: flex; align-items: center; justify-content: center"><img src="./assets/4b9674258673c2c67b894943c82c6ff4.png" alt="" style="width: 24px; height: auto"></div>
+                <div style="flex: 1; min-width: 0"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px"><span style="font-weight: 600">AXXA</span><span style="color: #c7c7cc">maintenant</span></div><div style="margin-top: 4px; font-size: 13px; line-height: 1.35">Fuite détectée : Laveuse. Eau coupée automatiquement.</div></div>
+              </div>
+              <div style="display: flex; gap: 8px">
+                <div style="flex: 1; background: rgba(30,30,32,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 8px 16px; font-size: 12px; color: #f5f5f7">Texto envoyé · 3</div>
+                <div style="flex: 1; background: rgba(30,30,32,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 8px 16px; font-size: 12px; color: #f5f5f7">Courriel envoyé · 3</div>
+              </div>
+            </div></div>
+        </div>
+        <div style="padding: 24px 24px 24px"><div style="margin-top: 8px; font-size: 21px; font-weight: 600">Alerte envoyée</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">Notification, texto et courriel aux personnes choisies. L'alarme sonne sur place.</div></div>
+      </li>
+    </ol>
+  </section>
+
+
+  <section id="recommande" style="max-width: 1272px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 80px 24px">
+    <figure style="margin: 0 auto; max-width: 920px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 32px">
+      <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6e6e73">Recommandé par les experts</div>
+      <blockquote style="margin: 0; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.2; font-weight: 500; letter-spacing: -0.02em; color: #1d1d1f">« Le dégât d'eau est la réclamation la plus fréquente. Une fermeture automatique, ça compte dans un dossier. »</blockquote>
+      <figcaption style="font-size: 17px; color: #6e6e73">Courtière en assurance habitation</figcaption>
+    </figure>
+  </section><section id="app" style="max-width: 1272px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 80px 24px 160px">
+    <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #0071a8; text-align: center">Application AXXA · iPhone et Android</div>
+    <h2 style="margin: 16px auto 0; max-width: 880px; text-align: center; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Partez l'esprit tranquille.</h2>
+
+    <div style="margin-top: 64px; position: relative; overflow: hidden; border-radius: 32px; height: 424px; background: #e7ecef">
+      <img src="./assets/413aa3a5773af5e9c0f5c9373c00f833.jpg" alt="Chalet noir des Laurentides en été, entouré de conifères" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%">
+      <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.5) 38%, rgba(255,255,255,0) 62%)"></div>
+      <div style="position: relative; height: 100%; box-sizing: border-box; padding: 0 64px; display: flex; flex-direction: column; justify-content: center; max-width: 624px">
+        <div style="font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; font-weight: 600; letter-spacing: -0.025em; color: #1d1d1f">Vous êtes à 300 km.<br>L'eau est déjà coupée.</div>
+        <p style="margin: 16px 0 0; font-size: 18px; line-height: 1.55; color: #1d1d1f">L'app vous dit ce qui s'est passé, où, et à quelle heure. Rouvrez l'eau d'un geste quand tout est réglé.</p>
+      </div>
+      <div class="hide-sm" role="img" aria-label="Écran verrouillé d'un téléphone : deux notifications AXXA, fuite détectée à la laveuse puis eau coupée automatiquement" style="position: absolute; right: 72px; top: 64px; width: 280px; height: 560px; box-sizing: border-box; border-radius: 48px; background: #1d1d1f; padding: 8px; border: 1px solid #3a3a3c">
+        <div style="height: 100%; border-radius: 40px; background: #0d0f16; position: relative; padding: 0 16px; box-sizing: border-box">
+          <div style="position: absolute; left: 50%; top: 16px; transform: translateX(-50%); width: 88px; height: 24px; border-radius: 999px; background: #000000"></div>
+          <div style="padding-top: 64px; text-align: center; color: #f5f5f7">
+            <div style="font-size: 14px; font-weight: 500; color: #d2d2d7">mardi 14 octobre</div>
+            <div style="font-size: 68px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; font-variant-numeric: tabular-nums">14:32</div>
+          </div>
+          <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 8px">
+            <div style="background: rgba(255,255,255,0.14); border-radius: 16px; padding: 16px; display: flex; gap: 8px">
+              <div style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; background: #000000; display: flex; align-items: center; justify-content: center"><img src="./assets/4b9674258673c2c67b894943c82c6ff4.png" alt="" style="width: 24px; height: auto"></div>
+              <div style="flex: 1; min-width: 0"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span style="font-weight: 600; color: #ffffff">AXXA</span><span style="color: #c7c7cc">maintenant</span></div><div style="margin-top: 4px; font-size: 13px; line-height: 1.35; color: #f5f5f7">Eau coupée automatiquement. Valve principale fermée.</div></div>
+            </div>
+            <div style="background: rgba(255,255,255,0.14); border-radius: 16px; padding: 16px; display: flex; gap: 8px">
+              <div style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 8px; background: #000000; display: flex; align-items: center; justify-content: center"><img src="./assets/4b9674258673c2c67b894943c82c6ff4.png" alt="" style="width: 24px; height: auto"></div>
+              <div style="flex: 1; min-width: 0"><div style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span style="font-weight: 600; color: #ffffff">AXXA</span><span style="color: #c7c7cc">il y a 1 s</span></div><div style="margin-top: 4px; font-size: 13px; line-height: 1.35; color: #f5f5f7">Fuite détectée : sonde Laveuse.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+      <div style="border-top: 1px solid #d2d2d7; padding-top: 24px"><div style="font-size: 19px; font-weight: 600">Prêt dès l'ouverture.</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">Tout est jumelé en usine. Placez les sondes, branchez le contrôleur.</div></div>
+      <div style="border-top: 1px solid #d2d2d7; padding-top: 24px"><div style="font-size: 19px; font-weight: 600">Trois façons d'être averti.</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">Notification, texto et courriel, en même temps.</div></div>
+      <div style="border-top: 1px solid #d2d2d7; padding-top: 24px"><div style="font-size: 19px; font-weight: 600">Toute la famille.</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">Partagez l'accès avec un proche, un voisin ou votre gestionnaire.</div></div>
+      <div style="border-top: 1px solid #d2d2d7; padding-top: 24px"><div style="font-size: 19px; font-weight: 600">Tout l'historique.</div><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #6e6e73">Chaque alerte et chaque fermeture, avec l'heure exacte.</div></div>
+    </div>
+
+
+    <div style="margin-top: 64px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px">
+      <a href="#app" aria-label="Bientôt sur l'App Store" style="display: flex; align-items: center; gap: 8px; background: #1d1d1f; color: #ffffff; border: 1px solid #d2d2d7; border-radius: 16px; padding: 8px 24px; min-height: 48px; box-sizing: border-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"></path></svg>
+        <span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-size: 11px; color: #d2d2d7">Bientôt sur l'</span><span style="font-size: 18px; font-weight: 600">App Store</span></span>
+      </a>
+      <a href="#app" aria-label="Bientôt sur Google Play" style="display: flex; align-items: center; gap: 8px; background: #1d1d1f; color: #ffffff; border: 1px solid #d2d2d7; border-radius: 16px; padding: 8px 24px; min-height: 48px; box-sizing: border-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"></path></svg>
+        <span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-size: 11px; color: #d2d2d7">Bientôt sur</span><span style="font-size: 18px; font-weight: 600">Google Play</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section id="kits" style="background: #f5f5f7">
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 160px 24px">
+      <div style="text-align: center">
+        <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Choisissez votre kit.</h2>
+        <p style="margin: 16px auto 0; max-width: 560px; font-size: 18px; line-height: 1.5; color: #6e6e73">Chaque kit est évolutif : ajoutez des sondes et des accessoires quand vous le souhaitez.</p>
+        <a href="catalogue-clair.html#composantes" style="display: inline-block; margin-top: 16px; font-size: 17px; font-weight: 500; color: #0071a8">Composantes à l'unité ›</a>
+      </div>
+      <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+        <div style="background: #ffffff; border-radius: 32px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+          <div style="height: 168px; display: flex; align-items: center; justify-content: center; background: #f5f5f7; border-radius: 16px; overflow: hidden"><img src="./assets/9df5549a3e8fb38b3e4685ee48c99c2d.webp" alt="Valve-contrôleur du Kit Départ AXXA" style="height: 78%; width: auto"></div>
+          <div style="font-size: 13px; color: #6e6e73">Pour commencer</div>
+          <div style="font-size: 21px; font-weight: 600; letter-spacing: -0.02em">Kit Départ</div>
+          <div style="font-size: 15px; line-height: 1.5; color: #424245">Valve-contrôleur Wi-Fi ¾ ou 1 po, 1 sonde filée, bloc d'alimentation.</div>
+          <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px"><div style="font-size: 22px; font-weight: 600">395 $</div><a href="produit-clair.html" style="font-size: 15px; font-weight: 500; color: #0071a8">En savoir plus ›</a></div>
+        </div>
+        <div style="background: #ffffff; border-radius: 32px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+          <div style="height: 168px; display: flex; align-items: center; justify-content: center; background: #f5f5f7; border-radius: 16px; overflow: hidden"><img src="./assets/ca0772e485b0b1c00cee8d7bfbab2e8b.webp" alt="Kit 4 sondes AXXA dans son coffret" style="height: 90%; width: auto"></div>
+          <div style="font-size: 13px; color: #6e6e73">Maison standard</div>
+          <div style="font-size: 21px; font-weight: 600; letter-spacing: -0.02em">Kit 4 sondes</div>
+          <div style="font-size: 15px; line-height: 1.5; color: #424245">Contrôleur à écran, valve motorisée, 4 sondes sans fil.</div>
+          <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px"><div style="font-size: 22px; font-weight: 600">895 $</div><a href="produit-clair.html" style="font-size: 15px; font-weight: 500; color: #0071a8">En savoir plus ›</a></div>
+        </div>
+        <div style="background: #1d1d1f; color: #f5f5f7; border: 1px solid #1d4a63; box-shadow: 0 0 0 1px rgba(0,161,232,0.25), 0 30px 80px -30px rgba(0,161,232,0.45); border-radius: 32px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+          <div style="height: 168px; display: flex; align-items: center; justify-content: center; background: #2a2a2d; border-radius: 16px; overflow: hidden"><img src="./assets/3e0dd6bf8b0de8d6fe13ca1bf9870594.webp" alt="Kit 5 sondes AXXA dans son coffret" style="height: 94%; width: auto"></div>
+          <div style="font-size: 13px; color: #a1a1a6">Le plus complet</div>
+          <div style="font-size: 21px; font-weight: 600; letter-spacing: -0.02em">Kit 5 sondes</div>
+          <div style="font-size: 15px; line-height: 1.5; color: #d2d2d7">Contrôleur à écran, valve motorisée, 5 sondes sans fil, coffret premium.</div>
+          <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 16px"><div style="font-size: 22px; font-weight: 600; color: #3cc4ff">1 095 $</div><a href="produit-clair.html" style="background: #ffffff; color: #1d1d1f; font-size: 15px; font-weight: 600; padding: 8px 16px; border-radius: 999px">Acheter</a></div>
+        </div>
+      </div>
+      <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 24px"><div style="display: flex; align-items: center; justify-content: center; gap: 16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a1e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"></path><path d="M9 12l2 2 4-4"></path></svg><div><div style="font-size: 17px; font-weight: 600; color: #1d1d1f">Garantie 5 ans</div></div></div><div style="display: flex; align-items: center; justify-content: center; gap: 16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a1e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v4h4"></path></svg><div><div style="font-size: 17px; font-weight: 600; color: #1d1d1f">30 jours pour changer d'idée</div></div></div><div style="display: flex; align-items: center; justify-content: center; gap: 16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a1e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M4 13v-1a8 8 0 0 1 16 0v1"></path><rect x="3" y="13" width="4" height="6" rx="1.5"></rect><rect x="17" y="13" width="4" height="6" rx="1.5"></rect></svg><div><div style="font-size: 17px; font-weight: 600; color: #1d1d1f">Soutien en français</div></div></div><div style="display: flex; align-items: center; justify-content: center; gap: 16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a1e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><circle cx="12" cy="9" r="5.5"></circle><path d="M9.5 9l1.8 1.8L14.8 7.4"></path><path d="M8.5 13.5L7 21l5-2.5 5 2.5-1.5-7.5"></path></svg><div><div style="font-size: 17px; font-weight: 600; color: #1d1d1f">Certifié</div></div></div></div>
+    </div>
+  </section>
+  
+
+  <section id="assurance" style="max-width: 1272px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 160px 24px 80px">
+    <div class="ins-card" style="position: relative; overflow: hidden; background: #1c1c1e; color: #f5f5f7; border-radius: 24px; padding: 64px 0; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px 24px; align-items: center">
+      <svg aria-hidden="true" width="600" height="520" viewBox="0 0 600 520" fill="none" stroke="rgba(0,161,232,0.22)" stroke-width="1.2" style="position: absolute; right: 0; bottom: 0; pointer-events: none"><circle cx="560" cy="520" r="140"></circle><circle cx="560" cy="520" r="240"></circle><circle cx="560" cy="520" r="340"></circle><circle cx="560" cy="520" r="440"></circle><circle cx="560" cy="520" r="540"></circle></svg>
+      <div style="position: relative; grid-column: 2 / span 6; min-width: 0">
+        <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #2bb0ee">Assurance habitation</div>
+        <h2 style="margin: 16px 0 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.08; font-weight: 600; letter-spacing: -0.03em">Recevez jusqu'à 15&nbsp;% sur votre prime.*</h2>
+        <p style="margin: 16px 0 0; max-width: 560px; font-size: 18px; line-height: 1.55; color: #a1a1a6">Plusieurs assureurs récompensent l'installation d'un système de détection avec fermeture automatique de l'eau. Vérifiez auprès du vôtre.</p>
+        <a href="a-venir-clair.html?p=rabais" style="display: inline-block; margin-top: 24px; background: #f5f5f7; color: #000000; font-size: 16px; font-weight: 500; padding: 16px 24px; border-radius: 999px">Calculer mon rabais</a>
+      </div>
+      <div style="position: relative; grid-column: 8 / span 4; min-width: 0; width: 453px; height: 194px">
+        
+        <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px"><div style="height: 88px; border-radius: 16px; background: #272729; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center"><img src="./assets/7e87a87bbad8a79663f9255f0911fb9e.png" alt="Desjardins Assurances" style="height: 40px; width: auto; max-width: 72%; filter: brightness(0) invert(1); opacity: 0.92"></div><div style="height: 88px; border-radius: 16px; background: #272729; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center"><img src="./assets/70bdfb95a369111599adbab73ea14039.png" alt="Beneva" style="height: 24px; width: auto; max-width: 72%; filter: brightness(0) invert(1); opacity: 0.92"></div><div style="height: 88px; border-radius: 16px; background: #272729; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center"><img src="./assets/a1b064774fb61670b8319e5fc2c6bbec.png" alt="Promutuel Assurance" style="height: 32px; width: auto; max-width: 72%; filter: brightness(0) invert(1); opacity: 0.92"></div><div style="height: 88px; border-radius: 16px; background: #272729; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center"><img src="./assets/39e2bbb60cfa7eeda5e45e16ef6a4451.png" alt="Co-operators" style="height: 24px; width: auto; max-width: 72%; filter: brightness(0) invert(1); opacity: 0.92"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="max-width: 1272px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 80px 24px 160px">
+    <div class="faq-grid">
+      <div>
+        <h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 56px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Questions fréquentes</h2>
+        <p style="margin: 16px 0 0; max-width: 344px; font-size: 17px; line-height: 1.55; color: #6e6e73">Vous ne trouvez pas votre réponse? Un conseiller vous répond.</p>
+        <a href="tel:18339956400" style="display: inline-block; margin-top: 24px; font-size: 16px; font-weight: 500; color: #0071a8">1-833-995-6400 ›</a>
+      </div>
+      <div class="faq">
+        <details open="" style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Ai-je besoin d'un plombier ?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Seulement pour installer la valve sur l'entrée d'eau. Les sondes et le contrôleur s'installent sans plombier.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Comment suis-je averti d'une fuite ?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Par notification dans l'app, par texto et par courriel, en même temps. L'alarme du contrôleur sonne aussi sur place.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Mon assureur m'accordera-t-il un rabais ?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Plusieurs assureurs récompensent l'installation d'un système de détection avec fermeture automatique de l'eau. Vérifiez auprès du vôtre.</p></details>
+        <details style="border-top: 1px solid #d2d2d7; border-bottom: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Est-ce que ça fonctionne au chalet ?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Oui. La valve se ferme d'elle-même même si personne n'est sur place, et l'alerte vous rejoint où que vous soyez.</p></details>
+        <a href="a-venir-clair.html?p=faq" style="display: inline-block; margin-top: 32px; font-size: 17px; font-weight: 500; color: #0071a8">Toutes les questions ›</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="position: relative; overflow: hidden; background: #e6eef3; flex: 1 0 auto; display: flex; flex-direction: column; justify-content: center">
+    <img src="./assets/44ac6749ee2b5ac95a82cdf743838d87.jpg" alt="Surface d'eau calme, une goutte forme des ondes" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center">
+    <div style="position: relative; max-width: 1272px; margin: 0 auto; padding: 160px 24px; box-sizing: border-box; width: 100%">
+      <div style="max-width: 600px; display: flex; flex-direction: column; gap: 24px; color: #1d1d1f">
+        <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Gardez l'eau là où elle doit être.</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #424245">Une question sur votre maison ou votre chalet? Un conseiller vous aide à choisir le bon kit.</p>
+        <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 16px">
+          <a href="tel:18339956400" style="background: #1d1d1f; color: #ffffff; font-size: 16px; font-weight: 500; padding: 16px 24px; border-radius: 999px">1-833-995-6400</a>
+          <a href="mailto:info@axxa.ca" style="background: transparent; color: #1d1d1f; font-size: 16px; font-weight: 500; padding: 16px 24px; border-radius: 999px; border: 1px solid #d2d2d7">info@axxa.ca</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: auto; background: #f5f5f7; border-top: 1px solid #e5e5ea; font-size: 14px; color: #6e6e73">
+    <div class="foot-grid" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 48px 24px 32px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <img src="./assets/7b7c358320e6e22d2102026be90ac227.png" alt="AXXA" style="height: 16px; width: auto; align-self: flex-start">
+        <div style="line-height: 1.6">AXXA Design inc.<br>680, boul. des Laurentides<br>Piedmont (Québec) J0R 1K0</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Boutique</div><a href="catalogue-clair.html#kits" style="color: #6e6e73">Kits</a><a href="catalogue-clair.html#composantes" style="color: #6e6e73">Composantes</a><a href="catalogue-clair.html#composantes" style="color: #6e6e73">Accessoires</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Soutien</div><a href="a-venir-clair.html?p=faq" style="color: #6e6e73">FAQ</a><a href="fonctionnement-clair.html#placer" style="color: #6e6e73">Installation</a><a href="#assurance" style="color: #6e6e73">Assurance</a><a href="application-clair.html" style="color: #6e6e73">Application</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Nous joindre</div><a href="tel:18339956400" style="color: #6e6e73">1-833-995-6400</a><a href="mailto:info@axxa.ca" style="color: #6e6e73">info@axxa.ca</a></div>
+    </div>
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 16px 24px 32px; border-top: 1px solid #d2d2d7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px"><span>© 2026 AXXA Design inc. Tous droits réservés.</span><span>* Chiffres provisoires, à confirmer avant le lancement.</span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":8100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var T = { ink: "#1d1d1f", sub: "#6e6e73", ok: "#1a7f45", alertText: "#b4480a", alertFill: "#ff7a1a", alertBg: "#ffe9d9", markerBg: "#ffffff", solidBg: "#1d1d1f", solidInk: "#ffffff", ring: "#00a1e8", rowSel: "#ffffff", segOn: "#ffffff", segOnInk: "#1d1d1f", segOffInk: "#6e6e73" };
+    var st = this.state || {};
+    var fuite = (st.mode || "fuite") === "fuite";
+    var sel = st.sel || "4";
+    var self = this;
+    var base = [
+      { id: "1", name: "Évier de cuisine", kind: "Sonde sans fil", x: 26.4, y: 20 },
+      { id: "2", name: "Frigo", kind: "Sonde double + règle 20 po", x: 42.7, y: 20 },
+      { id: "3", name: "Salle de bain", kind: "Sonde sans fil", x: 70, y: 19 },
+      { id: "4", name: "Laveuse", kind: "Sonde sans fil", x: 15.3, y: 81.8 },
+      { id: "5", name: "Chauffe-eau", kind: "Sonde sans fil", x: 77, y: 88 },
+      { id: "V", name: "Valve principale", kind: "Entrée d'eau", x: 72, y: 80 },
+      { id: "C", name: "Contrôleur", kind: "Wi-Fi, alarme sonore", x: 58.3, y: 77 }
+    ];
+    var devices = base.map(function (d) {
+      var isAlert = fuite && d.id === "4";
+      var letter = d.id === "V" || d.id === "C";
+      var status = "Sec", color = T.ok;
+      if (d.id === "V") { status = fuite ? "Fermée à 14:32:07" : "Ouverte"; color = fuite ? T.ink : T.ok; }
+      if (d.id === "C") { status = fuite ? "Alarme sonore activée" : "En ligne"; color = fuite ? T.ink : T.ok; }
+      if (isAlert) { status = "Fuite détectée à 14:32:06"; color = T.alertText; }
+      var badge;
+      if (isAlert) badge = "background:" + T.alertBg + ";border-color:" + T.alertFill + ";color:" + T.alertText + ";";
+      else if (letter) badge = "background:" + T.solidBg + ";border-color:" + T.solidBg + ";color:" + T.solidInk + ";";
+      else badge = "background:" + T.markerBg + ";border-color:" + T.ink + ";color:" + T.ink + ";";
+      var plan;
+      if (isAlert) plan = "background:#ffe9d9;border-color:#ff7a1a;color:#b4480a;";
+      else if (letter) plan = "background:#1d1d1f;border-color:#1d1d1f;color:#ffffff;";
+      else plan = "background:#ffffff;border-color:#1d1d1f;color:#1d1d1f;";
+      var isSel = sel === d.id;
+      return {
+        id: d.id, name: d.name, kind: d.kind, status: status,
+        markerStyle: "left:" + d.x + "%;top:" + d.y + "%;" + plan + (isSel ? "box-shadow:0 0 0 3px " + T.ring + ";" : ""),
+        badgeStyle: badge,
+        rowStyle: isSel ? "background:" + T.rowSel + ";" : "background:transparent;",
+        nameStyle: "color:" + (isAlert ? T.alertText : T.ink) + ";",
+        statusStyle: "color:" + color + ";",
+        select: function () { self.setState({ sel: d.id }); }
+      };
+    });
+    var rLen = st.rLen || "12", vSize = st.vSize || "34";
+    var chipOn = "border:1.5px solid #1d1d1f;color:#1d1d1f;", chipOff = "border:1px solid #d2d2d7;color:#6e6e73;";
+    var navSel = "accueil";
+    var navItems = [["accueil", "Accueil", "#"], ["catalogue", "Boutique", "catalogue-clair.html"], ["fonctionnement", "Fonctionnement", "fonctionnement-clair.html"], ["application", "Application", "application-clair.html"], ["entreprises", "Entreprises", "entreprises-clair.html"]].map(function (n) {
+      var cur = navSel === n[0];
+      return { href: n[2], label: n[1], current: cur ? "page" : "false",
+        style: cur ? "background:#ffffff;color:#1d1d1f;" : "background:transparent;color:#424245;",
+        pick: function () { self.setState({ nav: n[0] }); } };
+    });
+    var on = "background:" + T.segOn + ";color:" + T.segOnInk + ";";
+    var off = "background:transparent;color:" + T.segOffInk + ";";
+    return {
+      fuite: fuite,
+      devices: devices,
+      navItems: navItems,
+      r12Style: rLen === "12" ? chipOn : chipOff, r20Style: rLen === "20" ? chipOn : chipOff,
+      r12Pressed: rLen === "12" ? "true" : "false", r20Pressed: rLen === "20" ? "true" : "false",
+      setr12: function () { self.setState({ rLen: "12" }); }, setr20: function () { self.setState({ rLen: "20" }); },
+      v34Style: vSize === "34" ? chipOn : chipOff, v1Style: vSize === "1" ? chipOn : chipOff,
+      v34Pressed: vSize === "34" ? "true" : "false", v1Pressed: vSize === "1" ? "true" : "false",
+      setv34: function () { self.setState({ vSize: "34" }); }, setv1: function () { self.setState({ vSize: "1" }); },
+      normalPressed: fuite ? "false" : "true",
+      fuitePressed: fuite ? "true" : "false",
+      normalBtnStyle: fuite ? off : on,
+      fuiteBtnStyle: fuite ? on : off,
+      statusDotStyle: "background:" + (fuite ? T.alertFill : T.ok) + ";",
+      statusText: fuite ? "Fuite à la laveuse. Eau coupée à 14:32:07." : "Tout est sec. 5 sondes, la valve et le contrôleur sont en ligne.",
+      setNormal: function () { self.setState({ mode: "normal" }); },
+      setFuite: function () { self.setState({ mode: "fuite", sel: "4" }); }
+    };
+  }
+}
+</script>
+<script src="./proto.js" data-page="accueil" data-theme="clair"></script>
+</body>
+</html>

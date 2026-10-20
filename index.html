@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AXXA, prototype</title>
+<script>
+  var t = 'sombre';
+  try { if (localStorage.getItem('axxa-theme') === 'clair') t = 'clair'; } catch (e) {}
+  location.replace('accueil-' + t + '.html');
+</script>
+</head>
+<body style="margin:0;background:#000;color:#f5f5f7;font-family:system-ui,sans-serif">
+<p style="padding:24px"><a href="accueil-sombre.html" style="color:#00a1e8">Ouvrir le prototype AXXA</a></p>
+</body>
+</html>

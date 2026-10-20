@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>AXXA entreprises, clair, V1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./proto.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=swap">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#1d1d1f;text-decoration:none}a:hover{color:#0071a8}
+.nav-links{display:flex}
+@media (max-width:820px){.nav-links{display:none}}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.bld{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
+.bld>.tower{grid-column:1/span 6}.bld>.panel{grid-column:8/span 5}
+.segs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:start}
+.contact>.intro{grid-column:1/span 5}.contact>.card{grid-column:7/span 6}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+.fields>.full{grid-column:1/-1}
+.fld{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:500}
+.fld input,.fld select,.fld textarea{font-family:inherit;font-size:16px;color:#1d1d1f;background:#ffffff;border:1px solid #86868b;border-radius:12px;padding:0 14px;min-height:48px;box-sizing:border-box;width:100%}
+.fld textarea{padding:12px 14px;min-height:112px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid #00a1e8;outline-offset:1px}
+.faq-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.faq-grid>:first-child{grid-column:1/span 4}.faq-grid>.faq{grid-column:6/span 7}
+.foot-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 24px}
+.foot-grid>:first-child{grid-column:span 6}.foot-grid>*{grid-column:span 2}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex-shrink:0;font-size:26px;font-weight:300;line-height:1;color:#0071a8}
+.faq details[open] summary::after{content:"\2212"}
+@media (max-width:1000px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.strip{grid-template-columns:repeat(2,minmax(0,1fr))!important}.strip li{border-left:0!important}.strip li:nth-child(n+3){border-top:1px solid rgba(0,0,0,0.08)}.strip li:nth-child(even){border-left:1px solid rgba(0,0,0,0.08)!important}}
+@media (max-width:900px){.bld,.contact,.faq-grid{grid-template-columns:1fr;row-gap:40px}.bld>*,.contact>*,.faq-grid>*{grid-column:auto!important}.hero{min-height:0!important}.hero-img{position:static!important;height:300px!important;order:3}.hero-txt{padding-bottom:40px!important}.band{min-height:0!important}.band-img{position:static!important;height:300px!important;order:2}.segs{grid-template-columns:1fr;row-gap:48px}.segs img{aspect-ratio:4 / 3!important}.foot-grid>*{grid-column:span 6!important}}
+@media (max-width:640px){.strip{grid-template-columns:1fr!important}.strip li{border-left:0!important;border-top:1px solid rgba(0,0,0,0.08)}.strip li:first-child{border-top:0}.stats,.fields{grid-template-columns:1fr}.fields>*{grid-column:auto!important}.sec{padding-top:96px!important;padding-bottom:96px!important}.card{padding:24px!important}.vtxt{display:none}.foot-grid>*{grid-column:1/-1!important}}
+</style>
+</helmet>
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #1d1d1f; background: #ffffff; min-height: 100vh; display: flex; flex-direction: column">
+
+  <div style="background: #f5f5f7; font-size: 13px; color: #6e6e73; text-align: center; padding: 8px 16px">Conçu, fabriqué et assemblé au Québec · <a href="tel:18339956400" style="color: #0071a8">1-833-995-6400</a></div>
+
+  <header style="position: sticky; top: 0; z-index: 6; background: rgba(255,255,255,0.78); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #d2d2d7">
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a href="accueil-clair.html" aria-label="AXXA, accueil" style="flex: 1 1 0; display: flex; align-items: center; min-height: 44px"><img src="./assets/bc9f9890fcb942744874b78cc4788fe4.png" alt="AXXA" style="height: 16px; width: auto; display: block"></a>
+      <nav class="nav-links" aria-label="Principale" style="gap: 4px; padding: 4px; border-radius: 999px; background: rgba(255,255,255,0.55); border: 1px solid rgba(0,0,0,0.08); font-size: 14px">
+        <a href="accueil-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Accueil</a>
+        <a href="catalogue-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Boutique</a>
+        <a href="fonctionnement-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Fonctionnement</a>
+        <a href="application-clair.html" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; color: #424245">Application</a>
+        <a href="#" aria-current="page" style="padding: 8px 16px; border-radius: 999px; font-weight: 500; white-space: nowrap; background: #ffffff; color: #1d1d1f; box-shadow: 0 0 0 1px #d2d2d7">Entreprises</a>
+      </nav>
+      <div style="flex: 1 1 0; display: flex; align-items: center; justify-content: flex-end; gap: 8px">
+        <a href="entreprises-sombre.html" class="proto-theme proto-theme--bar" data-theme-to="sombre" aria-label="Passer au thème sombre" title="Passer au thème sombre" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.5 6.5 0 0 0 20 14.5Z"></path></svg></a>
+        <a href="a-venir-clair.html?p=panier" aria-label="Panier" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg>
+        </a>
+        <a href="#evaluation" style="background: #1d1d1f; color: #ffffff; font-size: 14px; font-weight: 500; padding: 0 16px; min-height: 44px; display: flex; align-items: center; border-radius: 999px; white-space: nowrap">Nous joindre</a>
+        <button type="button" aria-label="Menu" style="width: 48px; height: 48px; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #1d1d1f">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="position: relative; overflow: hidden; background: #ffffff; min-height: 640px; display: flex; flex-direction: column">
+    <img class="hero-img" src="./assets/495efd29abf5e37bd2a0a05662c1cf8a.webp" alt="Immeuble résidentiel de six étages au Québec" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 50%; display: block">
+    <div class="hero-txt" style="position: relative; width: 100%; max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 32px 24px 96px">
+      <nav aria-label="Fil d'Ariane" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; color: #424245"><a href="accueil-clair.html" style="color: #424245">Accueil</a><span aria-hidden="true">›</span><span style="color: #1d1d1f">Entreprises</span></nav>
+      <div style="max-width: 540px; margin-top: 80px">
+        <div style="font-size: 15px; font-weight: 600; color: #0071a8">Résidences, copropriétés et immeubles locatifs</div>
+        <h1 style="margin: 12px 0 0; font-size: clamp(40px, 4.6vw, 60px); line-height: 1.04; font-weight: 600; letter-spacing: -0.04em">Un dégât d'eau ne reste jamais dans un seul logement.</h1>
+        <p style="margin: 24px 0 0; max-width: 460px; font-size: 18px; line-height: 1.55; color: #424245">Une sonde par étage, une valve par colonne et une plateforme pour tout l'immeuble. La fuite s'arrête à l'étage où elle commence.</p>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px">
+          <a href="#evaluation" style="background: #00a1e8; color: #000000; font-size: 16px; font-weight: 600; padding: 0 28px; min-height: 52px; display: flex; align-items: center; border-radius: 999px">Demander une évaluation</a>
+          <a href="a-venir-clair.html?p=documents" style="font-size: 17px; font-weight: 500; color: #0071a8; min-height: 44px; display: flex; align-items: center">Fiche RPA (PDF) ›</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #f5f5f7">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 120px 24px">
+      <h2 style="margin: 0; max-width: 720px; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.1; font-weight: 600; letter-spacing: -0.03em">Dans un immeuble, une fuite coûte plus qu'un plancher.</h2>
+      <dl class="stats" style="margin: 56px 0 0; padding: 0">
+        <div style="padding-top: 24px; border-top: 1px solid #d2d2d7"><dt style="font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">1 sur 3</dt><dd style="margin: 12px 0 0; font-size: 16px; line-height: 1.5; color: #6e6e73">sinistres en bâtiment est un dégât d'eau*</dd></div>
+        <div style="padding-top: 24px; border-top: 1px solid #d2d2d7"><dt style="font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">25 000 $+</dt><dd style="margin: 12px 0 0; font-size: 16px; line-height: 1.5; color: #6e6e73">coût moyen d'un sinistre majeur en résidence pour aînés*</dd></div>
+        <div style="padding-top: 24px; border-top: 1px solid #d2d2d7"><dt style="font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">3 à 6 sem.</dt><dd style="margin: 12px 0 0; font-size: 16px; line-height: 1.5; color: #6e6e73">de travaux et de perturbations*</dd></div>
+        <div style="padding-top: 24px; border-top: 1px solid #d2d2d7"><dt style="font-size: 56px; font-weight: 600; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">2 à 10</dt><dd style="margin: 12px 0 0; font-size: 16px; line-height: 1.5; color: #6e6e73">résidents relocalisés par sinistre majeur*</dd></div>
+      </dl>
+      <p style="margin: 32px 0 0; font-size: 13px; color: #6e6e73">* Données de l'industrie de l'assurance citées par AXXA. Source exacte à confirmer avant la mise en ligne.</p>
+    </div>
+  </section>
+
+  <section id="immeuble">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 160px 24px">
+      <div class="bld">
+        <div class="tower" style="min-width: 0">
+          <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Seul l'étage touché est coupé.</h2>
+          <p style="margin: 16px 0 0; max-width: 480px; font-size: 18px; line-height: 1.55; color: #6e6e73">Chaque sonde ne ferme que la valve de son étage. Les autres résidents gardent l'eau. Touchez un étage pour simuler une fuite.</p>
+          <div style="margin-top: 40px; position: relative; padding: 24px 24px 24px 56px; border-radius: 32px; background: #f5f5f7">
+            <div aria-hidden="true" style="position: absolute; left: 31px; top: 32px; bottom: 32px; width: 2px; border-radius: 2px; background: #00a1e8"></div>
+            <div style="font-size: 13px; font-weight: 600; color: #6e6e73; margin: 0 0 12px">Colonne montante B</div>
+            <div role="group" aria-label="Étages de l'immeuble" style="display: flex; flex-direction: column; gap: 8px">
+              <sc-for list="{{floors}}" as="f" hint-placeholder-count="6">
+                <button type="button" onClick="{{f.pick}}" aria-pressed="{{f.on}}" style="font-family: inherit; position: relative; cursor: pointer; width: 100%; min-height: 56px; display: flex; align-items: center; gap: 16px; padding: 0 20px; border-radius: 16px; text-align: left; color: #1d1d1f; background: {{f.bg}}; border: {{f.border}}">
+                  <span aria-hidden="true" style="position: absolute; left: -32px; top: 50%; width: 14px; height: 14px; margin-top: -7px; border-radius: 4px; box-sizing: border-box; background: {{f.valveBg}}; border: 2px solid {{f.valveBd}}"></span>
+                  <span style="flex: 1 1 auto; font-size: 16px; font-weight: 600; white-space: nowrap">{{f.name}}</span>
+                  <span class="vtxt" style="font-size: 14px; color: #6e6e73; white-space: nowrap">{{f.valve}}</span>
+                  <span style="min-width: 64px; text-align: right; font-size: 14px; font-weight: 600; color: {{f.stColor}}">{{f.status}}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div class="panel" style="min-width: 0; padding-top: 8px">
+          <div style="border-radius: 32px; background: #f5f5f7; border: 1px solid #d2d2d7; overflow: hidden">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; border-bottom: 1px solid #d2d2d7">
+              <div><div style="font-size: 13px; color: #6e6e73">Plateforme AXXA</div><div style="margin-top: 2px; font-size: 16px; font-weight: 600">Résidence [NOM DU CLIENT]</div></div>
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; white-space: nowrap; color: #b4480a"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 999px; background: #ff7a1a"></span>1 alerte</span>
+            </div>
+            <ol aria-live="polite" style="list-style: none; margin: 0; padding: 8px 24px">
+              <li style="display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid #d2d2d7"><span style="flex: none; font-size: 14px; color: #6e6e73; font-variant-numeric: tabular-nums">14:32:06</span><div><div style="font-size: 16px; font-weight: 600; color: #b4480a">Fuite détectée</div><div style="margin-top: 2px; font-size: 15px; color: #6e6e73">{{leakWhere}}</div></div></li>
+              <li style="display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid #d2d2d7"><span style="flex: none; font-size: 14px; color: #6e6e73; font-variant-numeric: tabular-nums">14:32:07</span><div><div style="font-size: 16px; font-weight: 600">{{valveLine}}</div><div style="margin-top: 2px; font-size: 15px; color: #6e6e73">Fermeture automatique*</div></div></li>
+              <li style="display: flex; gap: 16px; padding: 16px 0"><span style="flex: none; font-size: 14px; color: #6e6e73; font-variant-numeric: tabular-nums">14:32:08</span><div><div style="font-size: 16px; font-weight: 600">Gestionnaire averti</div><div style="margin-top: 2px; font-size: 15px; color: #6e6e73">Texto, appel et courriel</div></div></li>
+            </ol>
+            <div style="padding: 16px 24px 24px; font-size: 15px; font-weight: 500; color: #1a7f4b">{{others}}</div>
+          </div>
+          <p style="margin: 16px 0 0; padding: 0 8px; font-size: 14px; line-height: 1.5; color: #6e6e73">Historique complet et rapports pour l'assureur, pour chaque immeuble.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="position: relative; overflow: hidden; background: #ffffff; min-height: 720px; display: flex; flex-direction: column">
+    <img class="band-img" src="./assets/7bcf53f436e60b436fc97f63d910f369.webp" alt="Colonnes montantes d'un immeuble équipées de valves motorisées" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 45%; display: block">
+    <div style="position: relative; width: 100%; max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 120px 24px 0">
+      <h2 style="margin: 0; max-width: 560px; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Ce qu'on installe dans l'immeuble.</h2>
+      <p style="margin: 16px 0 0; max-width: 440px; font-size: 18px; line-height: 1.55; color: #424245">Pensé pour les colonnes montantes existantes, sans câbler les logements.</p>
+    </div>
+    <div style="position: relative; width: 100%; max-width: 1272px; box-sizing: border-box; margin: auto auto 0; padding: 48px 24px 40px">
+      <ol class="strip" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-radius: 24px; background: rgba(255,255,255,0.82); border: 1px solid rgba(0,0,0,0.08); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); overflow: hidden">
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">01</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Une sonde par étage</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #6e6e73">Au pied de la colonne montante, là où l'eau s'accumule en premier.</p></li>
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px; border-left: 1px solid rgba(0,0,0,0.08)"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">02</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Valves de 1,25 à 4 po</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #6e6e73">Motorisées, posées sur les colonnes montantes existantes. Une par étage.</p></li>
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px; border-left: 1px solid rgba(0,0,0,0.08)"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">03</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Réseau LoRaWAN®</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #6e6e73">Un signal longue portée qui traverse béton et étages, sans le Wi-Fi des résidents.</p></li>
+        <li style="padding: 28px 32px; display: flex; flex-direction: column; gap: 8px; border-left: 1px solid rgba(0,0,0,0.08)"><span style="font-size: 15px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">04</span><h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Plateforme sécurisée</h3><p style="margin: 0; font-size: 15px; line-height: 1.55; color: #6e6e73">Alertes, historique et rapports pour tous vos immeubles, au même endroit.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 160px 24px">
+      <h2 style="margin: 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Pensé pour qui gère un immeuble.</h2>
+      <div class="segs" style="margin-top: 56px">
+        <article style="display: flex; flex-direction: column; gap: 0">
+          <img src="./assets/09660928e1b4f288cd7887ca64c54b80.webp" alt="Corridor d'une résidence pour aînés avec mains courantes" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; background: #f5f5f7">
+          <h3 style="margin: 24px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Résidences pour aînés</h3>
+          <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Des résidents à protéger, pas à relocaliser. L'alerte part au personnel de garde, de jour comme de nuit.</p>
+        </article>
+        <article style="display: flex; flex-direction: column; gap: 0">
+          <img src="./assets/05aed63fb2c70229d9e5494b5c72d238.webp" alt="Hall d'entrée d'une copropriété avec boîtes aux lettres et ascenseur" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; background: #f5f5f7">
+          <h3 style="margin: 24px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Copropriétés</h3>
+          <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">La fuite d'un voisin devient vite celle de tout l'immeuble. Une protection commune, gérée par le syndicat.</p>
+        </article>
+        <article style="display: flex; flex-direction: column; gap: 0">
+          <img src="./assets/3e7f026b2abe91a0186169ac7957fec1.webp" alt="Salle de lavage commune d'un immeuble locatif" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; background: #f5f5f7">
+          <h3 style="margin: 24px 0 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em">Immeubles locatifs</h3>
+          <p style="margin: 8px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Moins d'appels d'urgence et un historique à remettre à l'assureur après chaque événement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="evaluation" style="background: #f5f5f7">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 160px 24px">
+      <div class="contact">
+        <div class="intro" style="min-width: 0">
+          <h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 56px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Parlons de votre immeuble.</h2>
+          <p style="margin: 16px 0 0; max-width: 360px; font-size: 17px; line-height: 1.55; color: #6e6e73">Un conseiller vous rappelle dans un délai d'un jour ouvrable*.</p>
+          <h3 style="margin: 40px 0 0; font-size: 15px; font-weight: 600; color: #6e6e73">De la visite à la mise en service</h3>
+          <div style="position: relative; margin-top: 20px">
+            <div aria-hidden="true" style="position: absolute; left: 16px; top: 16px; bottom: 40px; width: 1px; background: #d2d2d7"></div>
+            <ol style="list-style: none; margin: 0; padding: 0">
+              <li style="position: relative; display: flex; gap: 16px; padding-bottom: 24px"><span style="position: relative; z-index: 1; flex: none; width: 32px; height: 32px; border-radius: 999px; background: #f5f5f7; border: 1px solid #d2d2d7; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">1</span><div style="padding-top: 5px"><h3 style="margin: 0; font-size: 17px; font-weight: 600">Évaluation sur place</h3><p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #6e6e73">Colonnes, diamètres, points à risque, couverture du réseau.</p></div></li>
+              <li style="position: relative; display: flex; gap: 16px; padding-bottom: 24px"><span style="position: relative; z-index: 1; flex: none; width: 32px; height: 32px; border-radius: 999px; background: #f5f5f7; border: 1px solid #d2d2d7; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">2</span><div style="padding-top: 5px"><h3 style="margin: 0; font-size: 17px; font-weight: 600">Plan et soumission</h3><p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #6e6e73">Sondes et valves, étage par étage, avec un prix ferme.</p></div></li>
+              <li style="position: relative; display: flex; gap: 16px; padding-bottom: 24px"><span style="position: relative; z-index: 1; flex: none; width: 32px; height: 32px; border-radius: 999px; background: #f5f5f7; border: 1px solid #d2d2d7; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">3</span><div style="padding-top: 5px"><h3 style="margin: 0; font-size: 17px; font-weight: 600">Installation</h3><p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #6e6e73">Par des plombiers certifiés, avec un minimum d'interruption d'eau*.</p></div></li>
+              <li style="position: relative; display: flex; gap: 16px; padding-bottom: 0"><span style="position: relative; z-index: 1; flex: none; width: 32px; height: 32px; border-radius: 999px; background: #f5f5f7; border: 1px solid #d2d2d7; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; color: #0071a8; font-variant-numeric: tabular-nums">4</span><div style="padding-top: 5px"><h3 style="margin: 0; font-size: 17px; font-weight: 600">Mise en service</h3><p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #6e6e73">Test de chaque étage, accès à la plateforme, formation du personnel.</p></div></li>
+            </ol>
+          </div>
+          <ul style="list-style: none; margin: 32px 0 0; padding: 24px 0 0; border-top: 1px solid #d2d2d7; display: flex; flex-direction: column; gap: 4px">
+            <li><a href="tel:18339956400" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; color: #0071a8">1-833-995-6400 ›</a></li>
+            <li><a href="mailto:info@axxa.ca" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; color: #0071a8">info@axxa.ca ›</a></li>
+            <li><a href="a-venir-clair.html?p=documents" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; font-weight: 500; color: #0071a8">Fiche RPA (PDF) ›</a></li>
+          </ul>
+          <p style="margin: 24px 0 0; max-width: 360px; font-size: 15px; line-height: 1.55; color: #6e6e73">Plombier, courtier ou gestionnaire immobilier&nbsp;? Écrivez-nous pour le programme partenaire*.</p>
+        </div>
+        <form class="card" style="min-width: 0; background: #ffffff; border-radius: 32px; padding: 40px">
+          <div class="fields">
+            <label class="fld">Nom complet<input type="text" name="nom" autocomplete="name"></label>
+            <label class="fld">Organisation<input type="text" name="organisation" autocomplete="organization"></label>
+            <label class="fld">Courriel<input type="email" name="courriel" autocomplete="email"></label>
+            <label class="fld">Téléphone<input type="tel" name="telephone" autocomplete="tel"></label>
+            <label class="fld">Type d'immeuble<select name="type"><option>Résidence pour aînés</option><option>Copropriété</option><option>Immeuble locatif</option><option>Autre</option></select></label>
+            <label class="fld">Nombre de logements<input type="number" name="logements" min="1" inputmode="numeric"></label>
+            <label class="fld full">Votre projet<textarea name="message" placeholder="Nombre d'étages, colonnes, échéancier…"></textarea></label>
+          </div>
+          <div style="margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+            <span style="font-size: 13px; color: #6e6e73">Vos coordonnées servent seulement à vous rappeler.</span>
+            <button type="button" style="font-family: inherit; background: #00a1e8; color: #000000; font-size: 16px; font-weight: 600; padding: 0 28px; min-height: 52px; border: 0; border-radius: 999px; cursor: pointer">Envoyer la demande</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="sec" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 120px 24px 160px">
+      <div class="faq-grid">
+        <div>
+          <h2 style="margin: 0; font-size: clamp(40px, 4.4vw, 56px); line-height: 1.05; font-weight: 600; letter-spacing: -0.035em">Questions des gestionnaires</h2>
+        </div>
+        <div class="faq">
+          <details open="" style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Peut-on l'installer dans un immeuble existant&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Oui. Les valves se posent sur les colonnes montantes en place et les sondes ne demandent aucun câblage*.</p></details>
+          <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Le système dépend-il du Wi-Fi des résidents&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Non. Il utilise son propre réseau LoRaWAN®, indépendant des logements.</p></details>
+          <details style="border-top: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Qui reçoit les alertes&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Les personnes que vous désignez : concierge, gestionnaire, personnel de garde. Par texto, appel et courriel.</p></details>
+          <details style="border-top: 1px solid #d2d2d7; border-bottom: 1px solid #d2d2d7; padding: 16px 0"><summary style="font-size: 18px; font-weight: 500; cursor: pointer">Les assureurs en tiennent-ils compte&nbsp;?</summary><p style="margin: 16px 48px 0 0; font-size: 16px; line-height: 1.6; color: #6e6e73">Plusieurs assureurs reconnaissent les systèmes de fermeture automatique*. Les rapports de la plateforme documentent chaque événement.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: auto; background: #f5f5f7; border-top: 1px solid #d2d2d7; font-size: 14px; color: #6e6e73">
+    <div class="foot-grid" style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 48px 24px 32px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <img src="./assets/bc9f9890fcb942744874b78cc4788fe4.png" alt="AXXA" style="height: 16px; width: auto; align-self: flex-start">
+        <div style="line-height: 1.6">AXXA Design inc.<br>680, boul. des Laurentides<br>Piedmont (Québec) J0R 1K0</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Boutique</div><a href="catalogue-clair.html#kits" style="color: #6e6e73">Kits</a><a href="catalogue-clair.html#composantes" style="color: #6e6e73">Composantes</a><a href="catalogue-clair.html#composantes" style="color: #6e6e73">Accessoires</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Soutien</div><a href="a-venir-clair.html?p=faq" style="color: #6e6e73">FAQ</a><a href="fonctionnement-clair.html#placer" style="color: #6e6e73">Installation</a><a href="produit-clair.html#documents" style="color: #6e6e73">Documents</a><a href="accueil-clair.html#assurance" style="color: #6e6e73">Assurance</a><a href="application-clair.html" style="color: #6e6e73">Application</a></div>
+      <div style="display: flex; flex-direction: column; gap: 8px"><div style="color: #1d1d1f; font-weight: 600">Nous joindre</div><a href="tel:18339956400" style="color: #6e6e73">1-833-995-6400</a><a href="mailto:info@axxa.ca" style="color: #6e6e73">info@axxa.ca</a><a href="#" style="color: #6e6e73">Entreprises</a></div>
+    </div>
+    <div style="max-width: 1272px; box-sizing: border-box; margin: 0 auto; padding: 16px 24px 32px; border-top: 1px solid #d2d2d7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px"><span>© 2026 AXXA Design inc. Tous droits réservés.</span><span>* Chiffres et fonctions provisoires, à confirmer avant le lancement. LoRaWAN® est une marque de la LoRa Alliance®.</span></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6360}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { floor: 3 };
+  }
+  renderVals() {
+    const s = this.state;
+    const n = s.floor;
+    return {
+      floors: [6, 5, 4, 3, 2, 1].map(k => {
+        const leak = k === n;
+        return {
+          name: k === 1 ? 'Rez-de-chaussée' : 'Étage ' + k,
+          on: leak ? 'true' : 'false',
+          bg: leak ? '#fff4ec' : '#ffffff',
+          border: leak ? '1px solid #b4480a' : '1px solid #d2d2d7',
+          valve: leak ? 'Valve fermée' : 'Valve ouverte',
+          status: leak ? 'Fuite' : 'Au sec',
+          stColor: leak ? '#b4480a' : '#1a7f4b',
+          valveBg: leak ? '#ff7a1a' : '#f5f5f7',
+          valveBd: leak ? '#ff7a1a' : '#00a1e8',
+          pick: () => this.setState({ floor: k })
+        };
+      }),
+      leakWhere: (n === 1 ? 'Rez-de-chaussée' : 'Étage ' + n) + ', colonne B, local technique',
+      valveLine: n === 1 ? 'Valve du rez-de-chaussée fermée' : 'Valve de l’étage ' + n + ' fermée',
+      others: 'Les 5 autres étages gardent l’eau.'
+    };
+  }
+}
+</script>
+<script src="./proto.js" data-page="entreprises" data-theme="clair"></script>
+</body>
+</html>

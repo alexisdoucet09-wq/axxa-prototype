@@ -1,0 +1,39 @@
+/* AXXA, prototype navigable : menu plein écran + décalage des ancres sous l'en-tête collant */
+[id] { scroll-margin-top: 96px; }
+html.proto-lock, html.proto-lock body { overflow: hidden; }
+/* Sous 600 px, la bascule passe dans le menu (sinon l'en-tête déborde) */
+@media (max-width: 600px) { .proto-theme--bar { display: none !important; } }
+
+.proto-menu {
+  position: fixed; inset: 0; z-index: 1000; display: none; flex-direction: column;
+  padding: 0 24px 32px; box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+}
+.proto-menu.is-open { display: flex; }
+.proto-menu--sombre { background: #000000; color: #f5f5f7; --mute: #a1a1a6; --line: #2c2c2e; }
+.proto-menu--clair { background: #ffffff; color: #1d1d1f; --mute: #6e6e73; --line: #d2d2d7; }
+.proto-menu a { color: inherit; text-decoration: none; }
+
+.proto-menu__top { height: 80px; display: flex; align-items: center; justify-content: space-between; }
+.proto-menu__brand { height: 16px; width: auto; display: block; }
+.proto-menu__close {
+  width: 48px; height: 48px; margin-right: -12px; border: 0; background: transparent; color: inherit;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.proto-menu__links { display: flex; flex-direction: column; margin-top: 24px; }
+.proto-menu__links a {
+  min-height: 56px; display: flex; align-items: center; font-size: 32px; font-weight: 600;
+  letter-spacing: -0.02em; color: var(--mute);
+}
+.proto-menu__links a[aria-current="page"], .proto-menu__links a:hover { color: inherit; }
+.proto-menu__foot {
+  margin-top: auto; padding-top: 24px; border-top: 1px solid var(--line);
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.proto-menu__foot a {
+  min-height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--line);
+  display: inline-flex; align-items: center; font-size: 17px; font-weight: 500;
+}
+@media (min-width: 821px) {
+  .proto-menu { left: auto; width: 420px; border-left: 1px solid var(--line); }
+}
